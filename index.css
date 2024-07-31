@@ -53,8 +53,6 @@ body {
 
 circle {
   fill: none;
-  stroke-dasharray: 0;
-  stroke-dashoffset: 566;
   stroke-width: 20;
 }
 

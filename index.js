@@ -42,7 +42,7 @@ class ProgressCircle {
 
   updateProgress(value) {
     const radius = this.frontCircle.attributes.r.value;
-    const circumference = 2 * Math.PI * radius;
+    const circumference = Math.ceil(2 * Math.PI * radius);
     const offset = circumference - (value / 100) * circumference;
     this.frontCircle.style.strokeDasharray = `${circumference} ${circumference}`;
     this.frontCircle.style.strokeDashoffset = offset;

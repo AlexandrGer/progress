@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Progress</title>
+  </head>
+  <body>
+    <div class="page">
+      <div class="progress">
+        <h1 class="progress__title">Progress</h1>
+        <div class="progress__wrapper">
+          <div class="progress__circle">
+            <svg class="circle">
+              <circle class="circle__behind" cx="100" cy="100" r="90"></circle>
+              <circle class="circle__front" cx="100" cy="100" r="90"></circle>
+            </svg>
+          </div>
+          <div class="progress__inputs">
+            <div class="container">
+              <input
+                class="input input__value"
+                type="number"
+                min="0"
+                max="100"
+                value="0"
+                id="valueInput"
+              />
+              <label class="input__text">Value</label>
+            </div>
+            <div class="container">
+              <label class="checkbox">
+                <input
+                  class="input input__checkbox"
+                  type="checkbox"
+                  id="animateInput"
+                />
+                <span class="checkbox__slider"></span>
+              </label>
+              <label class="input__text">Animate</label>
+            </div>
+            <div class="container">
+              <label class="checkbox">
+                <input
+                  class="input input__checkbox"
+                  type="checkbox"
+                  id="hideInput"
+                />
+                <span class="checkbox__slider"></span>
+              </label>
+              <label class="input__text">Hide</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

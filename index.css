@@ -1,0 +1,178 @@
+body {
+  margin: 0;
+}
+
+.page {
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 38px;
+  padding-left: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ====================================== */
+
+.progress {
+  width: 100%;
+  max-width: 568px;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+
+.progress__title {
+  margin: 0;
+  font-weight: 100;
+  font-size: 26px;
+}
+
+.progress__wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.progress__circle {
+  width: 200px;
+  height: 200px;
+  transition: opacity 1s linear;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  transform: rotate(-90deg);
+}
+
+.rotating {
+  animation: rotate 2s linear infinite;
+}
+
+circle {
+  fill: none;
+  stroke-width: 20;
+}
+
+.circle__behind {
+  stroke: #e3eafd;
+}
+
+.circle__front {
+  stroke: blue;
+  transition: stroke-dashoffset 1s ease-in-out;
+}
+
+.progress__inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.input {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.input__value {
+  width: 72px;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 23px;
+}
+
+.input__text {
+  font-size: 24px;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type="number"],
+input[type="number"]:hover,
+input[type="number"]:focus {
+  appearance: none;
+  -moz-appearance: textfield;
+}
+
+.checkbox {
+  display: inline-block;
+  height: 40px;
+  position: relative;
+  width: 72px;
+}
+
+.input__checkbox {
+  display: none;
+}
+
+.checkbox__slider {
+  background-color: #c8cdda;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+  border-radius: 20px;
+}
+
+.checkbox__slider::before {
+  background-color: #fff;
+  content: "";
+  position: absolute;
+  transition: 0.4s;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  left: 2px;
+  bottom: 2px;
+  top: 2px;
+  right: 2px;
+}
+
+.input__checkbox:checked + .checkbox__slider {
+  background: blue;
+}
+
+.input__checkbox:checked + .checkbox__slider:before {
+  transform: translateX(32px);
+  background-color: #fff;
+}
+
+@media screen and (max-width: 539px) {
+  .progress {
+    max-width: 320px;
+    height: 568px;
+    gap: 45px;
+  }
+
+  .progress__wrapper {
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(270deg);
+  }
+}

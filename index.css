@@ -5,8 +5,7 @@ body {
 .page {
   width: 100%;
   box-sizing: border-box;
-  padding-top: 38px;
-  padding-left: 35px;
+  padding: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
